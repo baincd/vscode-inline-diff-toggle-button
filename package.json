@@ -18,22 +18,39 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "inline-diff-toggle-button.toggle",
-				"title": "Toggle between Side-By-Side and Inline modes",
+				"command": "inline-diff-toggle-button.toggle-to-side-by-side",
+				"title": "Toggle to Side-By-Side view",
 				"icon": "$(diff)"
+			},
+			{
+				"command": "inline-diff-toggle-button.toggle-to-inline",
+				"title": "Toggle to Inline view",
+				"icon": {
+					"dark": "./codicon--diff-single_white.svg",
+					"light": "./codicon--diff-single.svg"
+				}
 			}
 		],
 		"menus": {
 			"editor/title": [
 				{
-					"command": "inline-diff-toggle-button.toggle",
+					"command": "inline-diff-toggle-button.toggle-to-side-by-side",
 					"group": "navigation@15",
-					"when": "isInDiffEditor"
+					"when": "isInDiffEditor && !config.diffEditor.renderSideBySide"
+				},
+				{
+					"command": "inline-diff-toggle-button.toggle-to-inline",
+					"group": "navigation@15",
+					"when": "isInDiffEditor && config.diffEditor.renderSideBySide"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "inline-diff-toggle-button.toggle",
+					"command": "inline-diff-toggle-button.toggle-to-side-by-side",
+					"when": "false"
+				},
+				{
+					"command": "inline-diff-toggle-button.toggle-to-inline",
 					"when": "false"
 				}
 			]
