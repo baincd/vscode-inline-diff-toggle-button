@@ -1,27 +1,13 @@
-# Hello World Sample
+# Inline/Side-by-Side Toggle Button
 
-This is a Hello World example that shows you how to use VS Code API.
+Adds button on diff editors to toggle between inline and side-by-side view
 
-Guide for this sample: https://code.visualstudio.com/api/get-started/your-first-extension.
+![](./screenshot.png)
 
-## Demo
+## Notes
 
-![demo](demo.gif)
+You may want to disable the "Diff Editor: Use Inline View When Space Is Limited" setting.  For more details, see https://code.visualstudio.com/updates/v1_82#_dynamic-layout
 
-## VS Code API
+## Attributions
 
-### `vscode` module
-
-- [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)
-- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-
-### Contribution Points
-
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-
-## Running the Sample
-
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+[Microsoft Codicons](https://github.com/microsoft/vscode-codicons)
