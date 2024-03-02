@@ -2,7 +2,7 @@
 	"name": "inline-diff-toggle-button",
 	"displayName": "Inline/Side-by-Side Toggle Button",
 	"description": "Adds button on diff editors to toggle between inline and side-by-side view",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "baincd",
 	"repository": "https://github.com/baincd/vscode-inline-diff-toggle-button",
 	"engines": {
