@@ -1,25 +1,37 @@
 {
-	"name": "helloworld-sample",
-	"displayName": "helloworld-sample",
-	"description": "HelloWorld example for VS Code",
+	"name": "inline-diff-toggle-button",
+	"displayName": "Inline/Side-by-Side Toggle Button",
+	"description": "Adds button on diff editors to toggle between inline and side-by-side view",
 	"version": "0.0.1",
-	"publisher": "vscode-samples",
-	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-sample",
+	"publisher": "baincd",
+	"repository": "https://github.com/baincd/vscode-inline-diff-toggle-button",
 	"engines": {
 		"vscode": "^1.74.0"
 	},
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
+	"activationEvents": [
+		"onStartupFinished"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "toggle.diff.renderSideBySide",
+				"title": "Toggle between Side-By-Side and Inline modes",
+				"icon": "$(diff)"
 			}
-		]
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "toggle.diff.renderSideBySide",
+					"group": "navigation@15",
+					"when": "isInDiffEditor"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
