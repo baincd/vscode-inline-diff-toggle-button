@@ -18,7 +18,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "toggle.diff.renderSideBySide",
+				"command": "inline-diff-toggle-button.toggle",
 				"title": "Toggle between Side-By-Side and Inline modes",
 				"icon": "$(diff)"
 			}
@@ -26,9 +26,15 @@
 		"menus": {
 			"editor/title": [
 				{
-					"command": "toggle.diff.renderSideBySide",
+					"command": "inline-diff-toggle-button.toggle",
 					"group": "navigation@15",
 					"when": "isInDiffEditor"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "inline-diff-toggle-button.toggle",
+					"when": "false"
 				}
 			]
 		}
